@@ -29,7 +29,6 @@ public class MedicoController {
 
 
         URI uri = uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
-
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
 
     }
